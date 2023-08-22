@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0F2E9; /* Verde claro */
+            background-image: url('https://www.razem.com.br/wp-content/uploads/2019/11/Manuten%C3%A7%C3%A3o-preventiva-industrial.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo img {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #4CAF50; /* Cor da moldura da logo */
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50; /* Cor do título */
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-group::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .form-group label,
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 48%;
+            float: left;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .alert {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://media.licdn.com/dms/image/D4E03AQGpb2GLWjgYqw/profile-displayphoto-shrink_800_800/0/1685639344839?e=1698278400&v=beta&t=iBxMRUvnyEWfjxi8EaTdW5jp9vexe_bLOJot0KjGYK0" alt="Logo da Empresa">
+        </div>
+        <h1>Ordem de Serviços</h1>
+        <form>
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Hora Início:</label>
+                <input type="time" name="startTime" id="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">Hora Fim:</label>
+                <input type="time" name="endTime" id="endTime" required>
+            </div>
+            <div class="form-group">
+                <label for="executante">Executante:</label>
+                <select name="executante" id="executante" required>
+                    <option value="">Selecione o executante</option>
+                    <!-- Adicione opções aqui -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select name="status" id="status" required>
+                    <option value="">Selecione o status</option>
+                    <!-- Adicione opções aqui -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="symptom">Sintoma:</label>
+                <input type="text" name="symptom" id="symptom" required>
+            </div>
+            <div class="form-group">
+                <label for="system">Sistema:</label>
+                <select name="system" id="system" required>
+                    <option value="">Selecione o sistema</option>
+                    <!-- Adicione opções aqui -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="maintenanceType">Tipo de Manutenção:</label>
+                <select name="maintenanceType" id="maintenanceType" required>
+                    <option value="">Selecione o tipo de manutenção</option>
+                    <!-- Adicione opções aqui -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="area">Área:</label>
+                <select name="area" id="area" required>
+                    <option value="">Selecione a área</option>
+                    <!-- Adicione opções aqui -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="productionLine">Linha de Produção:</label>
+                <select name="productionLine" id="productionLine" required>
+                    <option value="">Selecione a linha de produção</option>
+                    <!-- Adicione opções aqui -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="equipment">Equipamento:</label>
+                <input type="text" name="equipment" id="equipment" required>
+            </div>
+            <div class="form-group">
+                <label for="assembly">Conjunto:</label>
+                <input type="text" name="assembly" id="assembly" required>
+            </div>
+            <div class="form-group">
+                <label for="subassembly">Subconjunto:</label>
+                <input type="text" name="subassembly" id="subassembly" required>
+            </div>
+            <div class="form-group">
+                <label for="serviceDescription">Descrição do Serviço Realizado:</label>
+                <textarea name="serviceDescription" id="serviceDescription" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="observations">Observações:</label>
+                <textarea name="observations" id="observations" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productionImpact">Afeta a Produção:</label>
+                <input type="checkbox" name="productionImpact" id="productionImpact">
+            </div>
+            <div class="btn-container">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
